@@ -21,3 +21,4 @@
 | 19 | Ngưỡng phí vận chuyển có điều kiện | conditional_shipping_price_threshold | decimal | 18,3 |  |  |  | "**NULL:** Không thay đổi phí vận chuyển<br/>**Số khác NULL:** Nếu số tiền mua hàng đạt được số này<br/>Phí vận chuyển sẽ được thay thế bằng giá trị của conditional_shipping_price" |
 | 20 | Phí vận chuyển có điều kiện | conditional_shipping_price | decimal | 18,3 |  |  |  | |
 | 21 | Cờ khu vực giao hàng không khả dụng | unavailable_shipping_area_flg | nvarchar | 1
+| 22 | Phạm vi nhiệt độ giao hàng | shipping_temperature_range | nvarchar | 1 |  |  |  | "Phạm vi nhiệt độ giao hàng được lưu trữ<br/>**0:** Không có cài đặt<br/>**1:** Cài đặt vùng nhiệt độ 1<br/>**2:** Cài đặt vùng nhiệt độ 2<br/>**3:** Cài đặt vùng nhiệt độ 3<br/>
