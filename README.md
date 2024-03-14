@@ -3,7 +3,7 @@
 | 1         | ID cửa hàng                         | shop_id                        | nvarchar     | 10            | ○            | N''              |          |                                                               |
 | 2         | ID cài đặt phí vận chuyển          | shipping_id                    | nvarchar     | 10            | ○            | N''              |          |                                                               |
 | 3         | ID công ty vận chuyển              | delivery_company_id            | nvarchar     | 10            | ○            | N''              |          |                                                               |
-| 4         | Phân loại khu vực vận chuyển      | shipping_zone_no               | int          |               | ○            | N'0'             |          | "0: Phân loại cơ bản (không xem xét thông tin khu vực)
+| 4         | Phân loại khu vực vận chuyển      | shipping_zone_no               | int          |               | ○            | N'0'             |          | "0: Phân loại cơ bản (không xem xét thông tin khu vực) |
 
 | 5         | Tên khu vực vận chuyển            | shipping_zone_name             | nvarchar     | 30            | ○            | N''              |          | *Chỉ áp dụng cho địa chỉ giao hàng đặc biệt                     |
 | 6         | Mã bưu điện                       | zip                            | ntext        |               | ○            | N''              |          | "Mã bưu điện có dấu gạch nối phân cách bằng dấu phẩy
