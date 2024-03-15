@@ -5,6 +5,7 @@
 + **default**: Giá trị mặc định (default value)
 + **getdate()**: Hàm lấy giá trị ngày hiện tại
 + **N**: Tiền tố N được dùng để khai báo kiểu nvarchar trong sql. Ví dụ: khai báo id người dùng là user1 => câu lệnh là `INSERT INTO w2_ShopShippingZone (shop_id) VALUE (N'Shop1')`
+
 :::important
 
 **Cấu trúc bảng:**
