@@ -5,12 +5,13 @@
 + **default**: Giá trị mặc định (default value)
 + **getdate()**: Hàm lấy giá trị ngày hiện tại
 + **N**: Tiền tố N được dùng để khai báo kiểu nvarchar trong sql. Ví dụ: khai báo id người dùng là user1 => câu lệnh là `INSERT INTO w2_ShopShippingZone (shop_id) VALUE (N'Shop1')`
+:::important
 
 **Cấu trúc bảng:**
 
 | Tên cột        | Kiểu dữ liệu | Giới hạn     | Giá trị mặc định | Mô tả                                |
 |----------------|--------------|--------------|------------------|--------------------------------------|
-| surl_no        | bigint       | NOT NULL     |                  | Số thứ tự duy nhất của URL rút gọn  |
+| surl_no        | bigint       | NOT NULL     |                  | Số thứ tự của URL rút gọn  |
 | shop_id        | nvarchar(10) | NOT NULL     | ''               | ID cửa hàng                          |
 | short_url      | nvarchar(255)| NOT NULL     | ''               | URL rút gọn                          |
 | long_url       | nvarchar(2000)| NOT NULL    | ''               | URL dài                             |
