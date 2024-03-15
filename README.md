@@ -12,13 +12,13 @@ Bảng này lưu trữ quyền của các nhà điều hành cho các cửa hàn
 
 ### Cấu trúc Bảng:
 
-| Tên Cột        | Kiểu Dữ Liệu | Mô Tả                                     |
-|----------------|--------------|-------------------------------------------|
-| shop_id        | nvarchar(10) | Định danh cho cửa hàng.                  |
-| operator_id    | nvarchar(20) | Định danh cho nhà điều hành.             |
-| condition_type | nvarchar(30) | Loại điều kiện cho quyền.                |
-| permission     | nvarchar(1)  | Quyền được cấp cho nhà điều hành.        |
-| condition_value| nvarchar(30) | Giá trị liên kết với loại điều kiện.     |
+| Tên Cột        | Kiểu Dữ Liệu | Giá Trị Mặc Định | Mô Tả                                     |
+|----------------|--------------|------------------|-------------------------------------------|
+| shop_id        | nvarchar(10) | ''               | Định danh cho cửa hàng.                  |
+| operator_id    | nvarchar(20) | ''               | Định danh cho nhà điều hành.             |
+| condition_type | nvarchar(30) | ''               | Loại điều kiện cho quyền.                |
+| permission     | nvarchar(1)  | '0'              | Quyền được cấp cho nhà điều hành.        |
+| condition_value| nvarchar(30) | ''               | Giá trị liên kết với loại điều kiện.     |
 
 ### Ràng Buộc:
 
