@@ -1,37 +1,37 @@
-## Bảng w2_OperatorAuthority
+## Bảng w2_UserIntegration
 
-Bảng này lưu trữ quyền của các nhà điều hành cho các cửa hàng khác nhau.
+Bảng này lưu trữ tích hợp người dùng.
 
 :::important
 
 + **default**: Giá trị mặc định (default value)
 + **getdate()**: Hàm lấy giá trị ngày hiện tại
-+ **N**: Tiền tố N được dùng để khai báo kiểu nvarchar trong sql. Ví dụ: khai báo id người dùng là user1 => câu lệnh là `INSERT INTO w2_OperatorAuthority (shop_id) VALUE (N'url1')`
++ **N**: Tiền tố N được dùng để khai báo kiểu nvarchar trong sql. Ví dụ: khai báo id shop là shop1  <br/> => câu lệnh là `INSERT INTO w2_UserIntegration (last_changed) VALUE (N'w2_user')`
 
 :::
 
 ### Cấu trúc Bảng:
 
-| Tên Cột        | Kiểu Dữ Liệu | Giá Trị Mặc Định | Mô Tả                                     |
-|----------------|--------------|------------------|-------------------------------------------|
-| shop_id        | nvarchar(10) | ''               | Định danh cho cửa hàng.                  |
-| operator_id    | nvarchar(20) | ''               | Định danh cho nhà điều hành.             |
-| condition_type | nvarchar(30) | ''               | Loại điều kiện cho quyền.                |
-| permission     | nvarchar(1)  | '0'              | Quyền được cấp cho nhà điều hành.        |
-| condition_value| nvarchar(30) | ''               | Giá trị liên kết với loại điều kiện.     |
+| Tên Cột              | Kiểu Dữ Liệu | Giá Trị Mặc Định | Mô Tả                            |
+|----------------------|--------------|------------------|----------------------------------|
+| user_integration_no  | bigint       |                  | Số duy nhất cho tích hợp người dùng. |
+| status               | nvarchar(10) |                  | Trạng thái của tích hợp.               |
+| date_created         | datetime     | getdate()        | Ngày và giờ tạo bản ghi.             |
+| date_changed         | datetime     | getdate()        | Ngày và giờ thay đổi bản ghi.       |
+| last_changed         | nvarchar(20) |                  | Người thay đổi cuối cùng.            |
 
 ### Ràng Buộc:
 
-- **PK_w2_OperatorAuthority**: Ràng buộc khóa chính trên (`shop_id`, `operator_id`, `condition_value`).
+- **PK_w2_UserIntegration**: Ràng buộc khóa chính trên (`user_integration_no`).
 
 ### Chỉ mục:
 
-- **IX_w2_OperatorAuthority_1**: Chỉ mục trên (`shop_id`, `operator_id`, `condition_type`).
+- **IX_w2_UserIntegration_1**: Chỉ mục trên (`status`).
 
-```sql
+- ```sql
 SELECT TABLE_CATALOG, TABLE_NAME, COLUMN_NAME, ORDINAL_POSITION, IS_NULLABLE, DATA_TYPE, CHARACTER_MAXIMUM_LENGTH, COLUMN_DEFAULT
 FROM INFORMATION_SCHEMA.COLUMNS
-WHERE TABLE_NAME = 'w2_OperatorAuthority'
+WHERE TABLE_NAME = 'w2_UserIntegration'
 ```
 
 * Trong đó :
