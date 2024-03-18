@@ -35,7 +35,7 @@ Bảng này lưu trữ người dùng trong quá trình tích hợp người dù
 ```sql
 SELECT TABLE_CATALOG, TABLE_NAME, COLUMN_NAME, ORDINAL_POSITION, IS_NULLABLE, DATA_TYPE, CHARACTER_MAXIMUM_LENGTH, COLUMN_DEFAULT
 FROM INFORMATION_SCHEMA.COLUMNS
-WHERE TABLE_NAME = 'w2_UserIntegrationHistory'
+WHERE TABLE_NAME = 'w2_UserIntegrationUser'
 ```
 
 * Trong đó :
